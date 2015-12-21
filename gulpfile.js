@@ -18,6 +18,9 @@ var gulp = require('gulp'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     rename = require('gulp-rename'),
+    rigger = require('gulp-rigger'),
+    watch = require('gulp-watch'),
+    rm = require('rimraf'),
     minifyCss = require('gulp-minify-css');
 
 gulp.task('bower', function() {
