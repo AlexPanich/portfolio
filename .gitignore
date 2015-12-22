@@ -3,7 +3,9 @@ build
 src/bower_components
 src/css
 src/js/script.js
+src/index.html
 .sass-cache
 *.log
 Thumbs.db
 .DS_Store
+
