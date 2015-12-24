@@ -1,0 +1,74 @@
+// colors
+
+$blue-1: #3ba8c0;
+$blue-2: #41b9d4;
+$blue-3: #48cbe8;
+$blue-4: #51daf8;
+
+$gray-1: #58697a;
+$gray-2: #959aa8;
+$gray-3: #eff3f7;
+$gray-4: #849db5;
+
+$balck: #000000;
+$white: #ffffff;
+
+$font-color: #4a545d;
+$link-color: #89cbd9;
+
+
+
+
+
+//typography - font-size
+
+$fs-base: 15px;
+
+$fs-p: $fs-base;
+$fs-1: round($fs-base * 1.8);    // 27px
+$fs-2: round($fs-base * 1.6667); // 25px
+$fs-3: round($fs-base * 1.5334); // 23px
+$fs-4: round($fs-base * 1.4);    // 21px
+$fs-5: round($fs-base * 1.2667); // 19px
+$fs-6: round($fs-base * 1.1334); // 17px
+
+
+
+//typography - font-family
+
+$ff-base: "fira_sans", Helvetica, Arial, sans-serif;
+$ff-skills: "proxima_nova", Helvetica, Arial, sans-serif;
+
+
+
+
+
+//typography - line-height
+
+$lh-base: 1.4;
+
+$lh-p: round($fs-p * $lh-base);
+$lh-1: round($fs-1 * $lh-base);
+$lh-2: round($fs-2 * $lh-base);
+$lh-3: round($fs-3 * $lh-base);
+$lh-4: round($fs-4 * $lh-base);
+$lh-5: round($fs-5 * $lh-base);
+$lh-6: round($fs-6 * $lh-base);
+
+//typography - font-weight
+
+$fw-normal: 400;
+$fw-thin: 300;
+$fw-bold: 700;
+$fw-regular: 600;
+
+//typography - font-style
+
+$fst-normal: normal;
+$fst-italic: italic;
+
+
+
+
+
+

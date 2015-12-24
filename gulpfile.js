@@ -60,6 +60,11 @@ gulp.task('bower', function() {
         .pipe(gulp.dest(path.src.template));
 });
 
+gulp.task('build:font', ['build:clean'], function() {
+  return gulp.src(path.src.fonts)
+        .pepe(gulp.dest(path.build.fonts));
+})
+
 gulp.task('build:css', ['build:clean'], function() {
   return gulp.src(path.src.sass)
         .pipe(sass().on('error', sass.logError))
@@ -120,7 +125,7 @@ gulp.task('build:js', ['build:clean'], function() {
 });
 
 gulp.task('build',['build:clean','build:html', 'build:css', 'build:image',
-                   'build:js'], function() {
+                   'build:js', 'build:fonts'], function() {
   return gulp.src(path.build.html + '*.html')
         .pipe(minifyHtml())
         .pipe(gulp.dest(path.build.html));
