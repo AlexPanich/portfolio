@@ -6,3 +6,9 @@
   color: $color;
   font-style: $fst;
 }
+
+@mixin container() {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}

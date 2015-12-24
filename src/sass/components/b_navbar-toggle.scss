@@ -1,0 +1,40 @@
+.navbar-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  
+  &__lines {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    
+    height: 5px;
+    background-color: $gray-1;
+    border-radius: 3px;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      
+      height: 5px;
+      background-color: $gray-1;
+      border-radius: 3px;
+    }
+    
+    &::before {
+      top: -8px;
+    }
+    
+    &::after {
+      top: 8px;
+    }
+  }
+}
