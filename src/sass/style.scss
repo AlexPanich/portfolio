@@ -1,9 +1,13 @@
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
+@import 'placeholders';
 @import 'scafolding';
 @import 'type';
 
 @import 'components/b_page-header';
 @import 'components/b_logo';
 @import 'components/b_navbar-toggle';
+@import 'components/b_page-content';
+@import 'components/b_main-content';
+@import 'components/b_basic-information';

@@ -1,0 +1,8 @@
+.page-content {
+  flex-grow: 1;
+  
+  &__inner {
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+}

@@ -1,4 +1,4 @@
-@mixin font($ff: $ff-base, $fs: $fs-base, $lh: $lh-base, $fw: $fw-light, $color: $font-color, $fst: $fst-normal) {
+@mixin font($fs: $fs-base, $lh: $lh-base, $fw: $fw-thin, $color: $font-color, $fst: $fst-normal, $ff: $ff-base) {
   font-family: $ff;
   font-size: $fs;
   line-height: $lh;

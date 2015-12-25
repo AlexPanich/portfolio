@@ -25,12 +25,16 @@ $bg-color-header: #eff3f7;
 $fs-base: 15px;
 
 $fs-p: $fs-base;
-$fs-1: round($fs-base * 1.8);    // 27px
-$fs-2: round($fs-base * 1.6667); // 25px
-$fs-3: round($fs-base * 1.5334); // 23px
-$fs-4: round($fs-base * 1.4);    // 21px
-$fs-5: round($fs-base * 1.2667); // 19px
-$fs-6: round($fs-base * 1.1334); // 17px
+$fs-h1: round($fs-base * 1.8);     // 27px
+$fs-h2: round($fs-base * 1.6667);  // 25px
+$fs-h3: round($fs-base * 1.5334);  // 23px
+$fs-h4: round($fs-base * 1.4);     // 21px
+$fs-h5: round($fs-base * 1.2667);  // 19px
+$fs-h6: round($fs-base * 1.1334);  // 17px
+
+$fs-info-block-title-320: round($fs-base * 1.6);   // 24px
+$fs-basic-information-name-320: round($fs-base * 1.3334); // 20px
+
 
 
 
@@ -48,12 +52,12 @@ $ff-skills: "proxima_nova", Helvetica, Arial, sans-serif;
 $lh-base: 1.4;
 
 $lh-p: round($fs-p * $lh-base);
-$lh-1: round($fs-1 * $lh-base);
-$lh-2: round($fs-2 * $lh-base);
-$lh-3: round($fs-3 * $lh-base);
-$lh-4: round($fs-4 * $lh-base);
-$lh-5: round($fs-5 * $lh-base);
-$lh-6: round($fs-6 * $lh-base);
+$lh-1: round($fs-h1 * $lh-base);
+$lh-2: round($fs-h2 * $lh-base);
+$lh-3: round($fs-h3 * $lh-base);
+$lh-4: round($fs-h4 * $lh-base);
+$lh-5: round($fs-h5 * $lh-base);
+$lh-6: round($fs-h6 * $lh-base);
 
 //typography - font-weight
 

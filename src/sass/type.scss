@@ -1,29 +1,29 @@
 h1 {
-  @include font($ff-base, $fs-1, $lh-1, $fw-normal);
+  @include font($fs-h1, $lh-1, $fw-normal);
 }
 
 h2 {
-  @include font($ff-base, $fs-2, $lh-2, $fw-normal);
+  @include font($fs-h2, $lh-2, $fw-normal);
 }
 
 h3 {
-  @include font($ff-base, $fs-3, $lh-3, $fw-normal);
+  @include font($fs-h3, $lh-3, $fw-normal);
 }
 
 h4 {
-  @include font($ff-base, $fs-4, $lh-4, $fw-normal);
+  @include font($fs-h4, $lh-4, $fw-normal);
 }
 
 h5 {
-  @include font($ff-base, $fs-5, $lh-5, $fw-normal);
+  @include font($fs-h5, $lh-5, $fw-normal);
 }
 
 h6 {
-  @include font($ff-base, $fs-6, $lh-6, $fw-normal);
+  @include font($fs-h6, $lh-6, $fw-normal);
 }
 
 p {
-  @include font($ff-base, $fs-p, $lh-p, $fw-thin);
+  @include font($fs-p, $lh-p, $fw-thin);
 }
 
 ul {
@@ -35,7 +35,7 @@ li {
 }
 
 a {
-  @include font($ff-base, $fs-p, $lh-p, $fw-thin, $link-color, $fst-italic);
+  @include font($fs-p, $lh-p, $fw-thin, $link-color, $fst-italic);
   text-decoration: none;
   
   &:hover {

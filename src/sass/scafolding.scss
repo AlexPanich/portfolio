@@ -6,10 +6,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  font-weight: normal;
-  font-style: normal;
-  font-size: $fs-base;
-  color: $font-color;
+  @include font()
 }
 
 

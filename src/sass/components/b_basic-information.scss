@@ -1,0 +1,9 @@
+.basic-information {
+  @extend %info_block;
+  
+  &__title {
+    @include font($fs-info-block-title-320, $lh-base, $fw-normal, $blue-1);
+    
+    text-align: center;
+  }
+}
