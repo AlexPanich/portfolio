@@ -1,5 +1,66 @@
-%info_block {
+%zero-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  & > * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+%info-block {
   background-color: $gray-3;
   border-radius: 5px;
   padding: 12px;
+  margin-bottom: 15px;
+  
+  &__title {
+    @include font($fs-info-block-title-320, $lh-base, $fw-normal, $blue-1);
+    
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  &__list {
+    @extend %zero-list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & > * {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  &__item {
+    position: relative;
+    padding-top: 60px;
+    margin-bottom: 20px;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    
+    &-name {
+      @include font($fs-list-name-320, $lh-list, $fw-normal);
+      margin-bottom: 5px;
+    }
+    
+    &-time {
+      @include font($fs-list-time-320, $lh-list)
+    }
+  }
+  
+  
 }
+

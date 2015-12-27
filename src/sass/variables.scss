@@ -18,7 +18,8 @@ $link-color: #89cbd9;
 
 $bg-color-header: #eff3f7;
 
-
+$skills-gradient-color-top: $blue-1;
+$skills-gradient-color-bottom: darken($blue-1, 11);
 
 //typography - font-size
 
@@ -34,7 +35,10 @@ $fs-h6: round($fs-base * 1.1334);  // 17px
 
 $fs-info-block-title-320: round($fs-base * 1.6);   // 24px
 $fs-basic-information-name-320: round($fs-base * 1.3334); // 20px
-
+$fs-basic-information-desc-320: round($fs-base * 1.2667); // 19px
+$fs-list-name-320: 17px;
+$fs-list-time-320: 15px;
+$fs-skill-320: 14px;
 
 
 
@@ -42,9 +46,6 @@ $fs-basic-information-name-320: round($fs-base * 1.3334); // 20px
 
 $ff-base: "fira_sans", Helvetica, Arial, sans-serif;
 $ff-skills: "proxima_nova", Helvetica, Arial, sans-serif;
-
-
-
 
 
 //typography - line-height
@@ -58,6 +59,8 @@ $lh-3: round($fs-h3 * $lh-base);
 $lh-4: round($fs-h4 * $lh-base);
 $lh-5: round($fs-h5 * $lh-base);
 $lh-6: round($fs-h6 * $lh-base);
+
+$lh-list: 1.2;
 
 //typography - font-weight
 

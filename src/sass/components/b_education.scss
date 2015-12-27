@@ -1,0 +1,34 @@
+.education {
+  
+  @extend %info-block;
+  
+  &__title {
+    
+    @extend %info-block__title;
+  }
+  
+  &__list {
+    
+    @extend %info-block__list;
+
+  }
+  
+  &__item {
+    
+    @extend %info-block__item;
+    &::before {
+      
+      background: url("../../img/icon-bag.png") no-repeat center center;
+      
+    }
+    
+    &-name {
+      @extend %info-block__item-name;
+    }
+    
+    &-time {
+      @extend %info-block__item-time;
+    }
+    
+  }
+}

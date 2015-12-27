@@ -1,9 +1,44 @@
 .basic-information {
-  @extend %info_block;
+  
+  @extend %info-block;
   
   &__title {
-    @include font($fs-info-block-title-320, $lh-base, $fw-normal, $blue-1);
-    
+    @extend %info-block__title;
+  }
+  
+  &__avatar-wrap {
+    width: 132px;
+    @include center();
+    margin-bottom: 20px;
+  }
+  
+  &__content {
+
+  }
+  
+  &__list {
+    @extend %zero-list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__name {
+    @include font($fs-basic-information-name-320, $lh-list, $fw-bold);
+  }
+  
+  &__desc {
+    @include font($fs-basic-information-desc-320, $lh-list, $fw-regular);
+    margin-bottom: 28px;
     text-align: center;
+    
+    &:last-child {
+      width: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
   }
 }

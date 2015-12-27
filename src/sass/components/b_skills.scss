@@ -1,0 +1,15 @@
+.skills {
+  @include font($fs-skill-320, 2, $fw-normal, $white, $fst-normal, $ff-skills);
+  flex-grow: 0;
+  min-width: 43px;
+  text-align:center;
+  background: linear-gradient(to bottom, 
+              $skills-gradient-color-top 50%,
+              $skills-gradient-color-bottom 50%);
+  padding: 0 8px;
+  border-radius: 3px;
+  margin: 5px 0;
+
+}
+
+
