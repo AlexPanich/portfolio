@@ -1,0 +1,15 @@
+.side-bar {
+  
+  &__nav-wrap {
+    display: none;
+  }
+  
+  &__contacts-wrap {
+    
+  }
+  
+  &__social-wrap {
+    width: 82.5%;
+    @include center();
+  }
+}
