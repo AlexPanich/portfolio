@@ -10,10 +10,21 @@
     width: 132px;
     @include center();
     margin-bottom: 20px;
+    
+    @media (min-width: 768px) {
+      margin: 0;
+      width: 200px;
+      margin-left: 30px;
+      margin-right: 40px;
+    }
   }
   
   &__content {
-
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
   
   &__list {
@@ -21,16 +32,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    
+    
+    @media (min-width: 768px) {
+      text-align: left;
+      display: block;
+    }
   }
   
   &__name {
     @include font($fs-basic-information-name-320, $lh-list, $fw-bold);
+    
+    @media (min-width: 768px) {
+      float: left;
+      clear: both;
+      margin-right: 5px;
+    }
   }
   
   &__desc {
     @include font($fs-basic-information-desc-320, $lh-list, $fw-regular);
     margin-bottom: 28px;
-    text-align: center;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 15px;
+      display: block;
+      float: left;
+    }
     
     &:last-child {
       width: 100px;
@@ -39,6 +69,12 @@
       justify-content: space-between;
       flex-wrap: wrap;
       margin-bottom: 0;
+      
+      @media (min-width: 768px) {
+        width: auto;
+        max-width: 55%;
+        justify-content: flex-start;
+      }
     }
   }
 }

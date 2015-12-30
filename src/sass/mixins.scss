@@ -16,4 +16,22 @@
 @mixin container() {
   width: 90%;
   @include center();
+  
+  @media (min-width: 768px) {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
 }

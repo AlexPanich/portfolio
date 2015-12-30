@@ -5,6 +5,11 @@
   &__img {
     width: 166px;
     height: 29px;
+    
+    @media (min-width: 768px) {
+      width: 243px;
+      height: 42px;
+    }
   }
   
   &__text {

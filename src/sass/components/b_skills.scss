@@ -9,6 +9,10 @@
   padding: 0 8px;
   border-radius: 3px;
   margin: 5px 0;
+  
+  @media (min-width: 768px) {
+    margin-right: 5px;
+  }
 
 }
 

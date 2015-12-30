@@ -1,7 +1,15 @@
 .social {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  
+  @media (min-width: 768px) {
+    max-width: 338px;
+    padding-right: 90px;
+
+  }
   
   &__btn {
     display: block;
@@ -10,6 +18,19 @@
     border-radius: 50%;
     background-color: $blue-1;
     text-indent: -9999px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+    
+    
+    @media (min-width: 768px) {
+      width: 42px;
+      height: 42px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      
+      
+    }
     
     &--vk {
       background-image: url(../img/icon-vk.png);

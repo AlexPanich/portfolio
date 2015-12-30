@@ -9,8 +9,6 @@
   
   
   &__logo-wrap {
-    padding-top: 17px;
-    padding-bottom: 7px;
   }
   
   &__inner {
@@ -19,10 +17,21 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
+    padding-top: 17px;
+    padding-bottom: 7px;
+    
+    @media (min-width: 768px) {
+      padding-top: 38px;
+      padding-bottom: 30px;
+    }
   }
   
   &__social-wrap {
     display: none;
+    
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
   
   &__menu-wrap {
