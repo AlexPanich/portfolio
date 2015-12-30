@@ -11,5 +11,9 @@
   &__social-wrap {
     width: 82.5%;
     @include center();
+    
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }

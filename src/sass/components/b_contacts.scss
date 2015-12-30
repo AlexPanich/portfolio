@@ -1,19 +1,42 @@
 .contacts {
     
-  @extend %zero-list;
   margin-bottom: 20px;
-
+  
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  
   &__title {
     display: none;
   }
 
   &__list {
+    @extend %zero-list;
     display: flex;
     flex-direction: column;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
     
   &__item {
-    
+    @media (min-width: 768px) {
+      flex-basis: 33.3%;
+      flex-grow: 1;
+      
+      &--email {
+        order: 2;
+      }
+      
+      &--skype {
+        order: 3;
+      }
+      
+      &--phone {
+        order: 1;
+      }
+    }
   }
   
   &__link {
@@ -26,6 +49,12 @@
     padding-bottom: 10px;
     color: $white;
     text-decoration: none;
+    
+    @media (min-width: 768px) {
+      padding-left: 35%;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
     
     &:hover {
       text-decoration: none;
@@ -41,26 +70,59 @@
       width: 30px;
       height: 30px;
       
+      @media (min-width: 768px) {
+        top: 6px;
+        bottom: auto;
+        right: 70%;
+      }
     }
     
     &--email {
-      background-color: $email-color;
+      background-color: $email-color-320;
+      
+      @media (min-width: 768px) {
+        background-color: $email-color-768;
+      }
+      
       &::before {
         background: url("../img/icon-email.png") no-repeat left center;
+        
+        @media (min-width: 768px) {
+          background-image: url("../img/icon-email-768.png");
+        }
       }
     }
     
     &--phone {
-      background-color: $phone-color;
+      background-color: $phone-color-320;
+      
+      @media (min-width: 768px) {
+        background-color: $phone-color-768;
+      }
+      
       &::before {
         background: url("../img/icon-phone.png") no-repeat left center;
+        
+        @media (min-width: 768px) {
+          background-image: url("../img/icon-phone-768.png");
+        }
       }
     }
     
     &--skype {
-      background-color: $skype-color;
+      background-color: $skype-color-320;
+      
+      @media (min-width: 768px) {
+        background-color: $skype-color-768;
+        
+      }
+      
       &::before {
         background: url("../img/icon-skype.png") no-repeat left center;
+        
+        @media (min-width: 768px) {
+          background-image: url("../img/icon-skype-768.png");
+        }
       }
     }
   }

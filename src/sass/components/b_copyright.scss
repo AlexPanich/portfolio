@@ -2,4 +2,8 @@
   @include font($fs-copyright-320, $lh-copyright);
   text-align: center;
   padding: 10px 0;
+  
+  @media (min-width: 768px) {
+    font-size: $fs-copyright-768;
+  }
 }

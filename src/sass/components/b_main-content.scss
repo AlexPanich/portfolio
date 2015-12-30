@@ -3,5 +3,9 @@
   &__inner {
     @include container();
     padding-bottom: 25px;
+    
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
   }
 }
