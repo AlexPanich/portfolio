@@ -2,12 +2,21 @@
   flex-grow: 1;
   
   &__inner {
+    display: flex;
+    flex-direction: column;
     padding-top: 15px;
     padding-bottom: 20px;
     
     @media (min-width: 768px) {
       padding-top: 30px;
       padding-bottom: 30px;
+    }
+    
+    @media (min-width: 1200px) {
+      flex-direction: row-reverse;
+      
+      width: 960px;
+      @include center();
     }
   }
 }

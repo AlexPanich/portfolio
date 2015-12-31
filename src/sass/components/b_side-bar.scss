@@ -2,6 +2,10 @@
   
   &__nav-wrap {
     display: none;
+    
+    @media (min-width: 1200px) {
+      display: block;
+    }
   }
   
   &__contacts-wrap {

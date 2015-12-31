@@ -16,18 +16,24 @@ $white: #ffffff;
 $font-color: #4a545d;
 $link-color: #89cbd9;
 
-$bg-color-header: #eff3f7;
-$bg-color-footer: #eff3f7;
+$bg-color-header: $gray-3;
+$bg-color-footer: $gray-3;
+$bg-color-main-nav-320: $gray-3;
+$bg-color-main-nav-320-active: #2fa5bc;
+$border-main-nav-320: #8196ac;
 
 $skills-gradient-color-top: $blue-1;
 $skills-gradient-color-bottom: darken($blue-1, 11);
 
 $email-color-320: #27a1ba;
 $email-color-768: $blue-3;
+$email-color-1200: $blue-2;
 $phone-color-320: $blue-2;
 $phone-color-768: $blue-2;
+$phone-color-1200: $blue-3;
 $skype-color-320: $blue-3;
 $skype-color-768: $blue-4;
+$skype-color-1200: $blue-4;
 
 //typography - font-size
 
@@ -55,6 +61,10 @@ $fs-skill-320: 14px;
 $fs-copyright-320: 11px;
 $fs-copyright-768: 13px;
 
+$fs-side-bar-caption: 21px;
+
+$fs-main-nav-320: 24px;
+$fs-main-nav-1200: 21px;
 
 
 //typography - font-family

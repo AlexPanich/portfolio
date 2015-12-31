@@ -4,10 +4,22 @@
   
   @media (min-width: 768px) {
     margin-bottom: 0;
+    border-radius: 3px;
+    overflow: hidden;
   }
   
   &__title {
     display: none;
+    background-color: $blue-1;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    
+    @include font($fs-side-bar-caption, $lh-base, $fw-normal, $white)
+    
+    @media (min-width: 1200px) {
+      display: block;
+    }
   }
 
   &__list {
@@ -17,6 +29,10 @@
     
     @media (min-width: 768px) {
       flex-direction: row;
+    }
+    
+    @media (min-width: 1200px) {
+      flex-direction: column;
     }
   }
     
@@ -35,6 +51,22 @@
       
       &--phone {
         order: 1;
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      width: 250px;
+      
+      &--email {
+        order: 1;
+      }
+      
+      &--skype {
+        order: 3;
+      }
+      
+      &--phone {
+        order: 2;
       }
     }
   }
@@ -56,6 +88,10 @@
       padding-bottom: 14px;
     }
     
+    @media (min-width: 1200px) {
+      padding-left: 33%;
+    }
+    
     &:hover {
       text-decoration: none;
     }
@@ -75,6 +111,10 @@
         bottom: auto;
         right: 70%;
       }
+      
+      @media (min-width: 1200px) {
+        right: 73%;
+      }
     }
     
     &--email {
@@ -82,6 +122,10 @@
       
       @media (min-width: 768px) {
         background-color: $email-color-768;
+      }
+      
+      @media (min-width: 1200px) {
+        background-color: $email-color-1200;
       }
       
       &::before {
@@ -100,6 +144,10 @@
         background-color: $phone-color-768;
       }
       
+      @media (min-width: 1200px) {
+        background-color: $phone-color-1200;
+      }
+      
       &::before {
         background: url("../img/icon-phone.png") no-repeat left center;
         
@@ -114,7 +162,10 @@
       
       @media (min-width: 768px) {
         background-color: $skype-color-768;
-        
+      }
+      
+      @media (min-width: 1200px) {
+        background-color: $skype-color-1200;
       }
       
       &::before {

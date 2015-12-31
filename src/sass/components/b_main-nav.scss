@@ -1,0 +1,123 @@
+.main-nav {
+  position: relative;
+  box-shadow: 0 6px 6px 0px rgba(88, 105, 122, 0.35);
+  
+  @media (min-width: 768px) {
+    box-shadow: none;
+  }
+  
+  &__list {
+    @extend %zero-list;
+    
+    @media (min-width: 768px) {
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px 0px rgba(13, 16, 7, 0.3);
+      
+      &::before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          right: 12px;
+          width: 21px;
+          height: 21px;
+          transform: rotate(45deg);
+          background-color: $bg-color-main-nav-320-active;
+          box-shadow: 0px 0px 5px -1px rgba(13, 16, 7, 0.3);
+        }
+    }
+    
+    @media (min-width: 1200px) {
+      
+      box-shadow: none;
+      margin-bottom: 25px;
+      &::before {
+        content: none;
+      }
+    }
+  }
+  
+  
+  &__item {
+    @media (min-width: 768px) {
+    position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        left: 6px;
+        right: 6px;
+        bottom: 100%;
+        background-color: $bg-color-main-nav-320-active;
+      }
+
+      &:first-child {
+        &::before {
+          content: none;
+        }
+      }
+    }
+    &--active {
+      @media (min-width: 768px) {
+        &::before {
+          content: none;
+        }
+      }
+      
+      & a {
+        background-color: $bg-color-main-nav-320-active;
+        color: $white;
+        cursor: default;
+        
+        @media (min-width: 1200px) {
+          font-size: ($fs-main-nav-1200 + 1);
+          padding-bottom: 21px;
+          
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  &__link {
+    
+    @include font($fs-main-nav-320, $lh-base, $fw-regular, $color: $gray-1);
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: $bg-color-main-nav-320;
+    border-top: 1px solid $border-main-nav-320;
+    
+    @media (min-width: 768px) {
+      border: none;  
+    }
+    
+    @media (min-width: 1200px) {
+      color: $gray-2;
+      font-size: $fs-main-nav-1200;
+      text-align: left;
+      padding: 22px 0;
+      padding-left: 28px;
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      @media (min-width: 1200px) {
+        color: $blue-1;
+      }
+    }
+    
+    
+    
+  }
+}
+
+
+
+
+
