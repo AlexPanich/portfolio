@@ -2,6 +2,14 @@
   
   @extend %info-block;
   
+  @media (min-width: 768px) {
+    padding-bottom: 30px;
+  }
+  
+  @media (min-width: 1200px) {
+    padding-bottom: 35px;
+  }
+  
   &__title {
     @extend %info-block__title;
   }
@@ -16,6 +24,13 @@
       width: 200px;
       margin-left: 30px;
       margin-right: 40px;
+    }
+    
+    @media (min-width: 1200px) {
+      width: 150px;
+      padding-top: 15px;
+      margin-left: 52px;
+      margin-right: 24px;
     }
   }
   
@@ -43,23 +58,34 @@
   }
   
   &__name {
-    @include font($fs-basic-information-name-320, $lh-list, $fw-bold);
+    @include font($fs-basic-information-name-320, $lh-list, $fw-bold, $list-name-color);
     
     @media (min-width: 768px) {
       float: left;
       clear: both;
+      font-size: $fs-basic-information-name-768;
       margin-right: 5px;
+    }
+    
+    @media (min-width: 1200px) {
+      font-size: $fs-basic-information-name-1200;
+      margin-right: 18px;
     }
   }
   
   &__desc {
-    @include font($fs-basic-information-desc-320, $lh-list, $fw-regular);
+    @include font($fs-basic-information-desc-320, $lh-list, $fw-regular, $list-desc-color);
     margin-bottom: 28px;
     
     @media (min-width: 768px) {
       margin-bottom: 15px;
       display: block;
       float: left;
+      font-size: $fs-basic-information-desc-768;
+    }
+    
+    @media (min-width: 1200px) {
+      font-size: $fs-basic-information-desc-1200;
     }
     
     &:last-child {

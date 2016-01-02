@@ -79,13 +79,14 @@
     padding-left: 38%;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: $white;
     text-decoration: none;
+    @include font($fs-contact-link-320, $lh-base, $fw-normal, $white)
     
     @media (min-width: 768px) {
       padding-left: 35%;
       padding-top: 14px;
       padding-bottom: 14px;
+      font-size: $fs-contact-link-768;
     }
     
     @media (min-width: 1200px) {
@@ -94,6 +95,10 @@
     
     &:hover {
       text-decoration: none;
+      
+      @media (min-width: 1200px) {
+        text-decoration: underline;
+      }
     }
     
     &::before {

@@ -35,6 +35,9 @@ $skype-color-320: $blue-3;
 $skype-color-768: $blue-4;
 $skype-color-1200: $blue-4;
 
+$list-name-color: #4a545d;
+$list-desc-color: #37424d;
+
 //typography - font-size
 
 $fs-base: 15px;
@@ -49,14 +52,18 @@ $fs-h6: round($fs-base * 1.1334);  // 17px
 
 $fs-info-block-title-320: round($fs-base * 1.6);   // 24px
 $fs-info-block-title-768: round($fs-base * 1.8);  // 27px
-$fs-basic-information-name-320: round($fs-base * 1.3334); // 20px
-$fs-basic-information-name-320: round($fs-base * 1.2667); // 19px
-$fs-basic-information-desc-320: round($fs-base * 1.2667); // 19px
-$fs-basic-information-desc-320: round($fs-base * 1.2); // 18px
+$fs-basic-information-name-320: 20px; // 20px
+$fs-basic-information-name-768: 19px; // 19px
+$fs-basic-information-name-1200: 17px; // 19px
+$fs-basic-information-desc-320: 19px; // 19px
+$fs-basic-information-desc-768: 18px; // 18px
+$fs-basic-information-desc-1200: 15px; // 18px
 $fs-list-name-320: 17px;
 $fs-list-name-768: 19px;
+$fs-list-name-1200: 17px;
 $fs-list-time-320: 15px;
 $fs-list-time-768: 18px;
+$fs-list-time-1200: 15px;
 $fs-skill-320: 14px;
 $fs-copyright-320: 11px;
 $fs-copyright-768: 13px;
@@ -65,6 +72,9 @@ $fs-side-bar-caption: 21px;
 
 $fs-main-nav-320: 24px;
 $fs-main-nav-1200: 21px;
+
+$fs-contact-link-320: 16px;
+$fs-contact-link-768: 17px;
 
 
 //typography - font-family
@@ -87,6 +97,7 @@ $lh-6: round($fs-h6 * $lh-base);
 
 $lh-list: 1.2;
 $lh-copyright: 1.2;
+$lh-contact-link: 2;
 
 //typography - font-weight
 

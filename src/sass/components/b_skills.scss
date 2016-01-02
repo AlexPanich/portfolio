@@ -1,5 +1,5 @@
 .skills {
-  @include font($fs-skill-320, 2, $fw-normal, $white, $fst-normal, $ff-skills);
+  @include font($fs-skill-320, $lh-base, $fw-normal, $white, $fst-normal, $ff-skills);
   flex-grow: 0;
   min-width: 43px;
   text-align:center;

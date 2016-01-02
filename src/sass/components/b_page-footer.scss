@@ -19,6 +19,10 @@
     height: 100%;
     left: 0;
     top: 0;
+    
+    @media (min-width: 1200px) {
+      left: 100px;
+    } 
   }
   
   &__copyright-wrap {

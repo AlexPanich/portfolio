@@ -60,9 +60,9 @@ gulp.task('bower', function() {
         .pipe(gulp.dest(path.src.template));
 });
 
-gulp.task('build:font', ['build:clean'], function() {
+gulp.task('build:fonts', ['build:clean'], function() {
   return gulp.src(path.src.fonts)
-        .pepe(gulp.dest(path.build.fonts));
+        .pipe(gulp.dest(path.build.fonts));
 })
 
 gulp.task('build:css', ['build:clean'], function() {
