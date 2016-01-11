@@ -3,12 +3,10 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-
   
   @media (min-width: 768px) {
     max-width: 338px;
     padding-right: 90px;
-
   }
   
   @media (min-width: 1200px) {
@@ -17,17 +15,29 @@
   
   &__btn {
     display: block;
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
-    background-color: $gray-1;
-    text-indent: -9999px;
     margin-left: 10px;
     margin-bottom: 10px;
     
-    &:hover,
-    &:focus {
-      background-color: $blue-1;
+    &--hidden {
+      display: none; 
+    }
+    
+    & svg {
+      width: 50px;
+      height: 50px;
+      fill: $gray-1;
+      transition: fill 0.2s;
+      
+      @media (min-width: 720px) {
+        width: 42px;
+        height: 42px;
+      }
+    }
+    
+    &:hover svg,
+    &:focus svg {
+      fill: $blue-1;
     }
     
     @media (min-width: 768px) {
@@ -42,31 +52,15 @@
     }
     
     &--vk {
-      background-image: url(../img/icon-vk.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 38px;
     }
     
     &--twitter {
-      background-image: url(../img/icon-twitter.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 28px;
     }
     
     &--facebook {
-      background-image: url(../img/icon-facebook.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 33px;
     }
     
     &--github {
-      background-image: url(../img/icon-github.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 38px;
     }
   }
 }

@@ -8,6 +8,19 @@
   &__img {
     margin-top: -4px;
     margin-left: -4px;
+    
+    width: 132px;
+    height: 132px;
+    
+    @media (min-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
+  
+    @media (min-width: 1200px) {
+      width: 150px;
+      height: 150px;
+    }
   }
   
   @media (min-width: 768px) {

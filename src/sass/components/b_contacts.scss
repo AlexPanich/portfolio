@@ -101,20 +101,21 @@
       }
     }
     
-    &::before {
-      content: "";
+    & svg {
       position: absolute;
-      right: 62%;
+      right: 65%;
       top: 0;
       bottom: 0;
       margin: auto;
-      width: 30px;
-      height: 30px;
+      width: 22px;
+      height: 22px;
+      fill: $white;
       
       @media (min-width: 768px) {
-        top: 6px;
-        bottom: auto;
+        bottom: 5px;
         right: 70%;
+        width: 25px;
+        height: 25px;
       }
       
       @media (min-width: 1200px) {
@@ -132,14 +133,6 @@
       @media (min-width: 1200px) {
         background-color: $email-color-1200;
       }
-      
-      &::before {
-        background: url("../img/icon-email.png") no-repeat left center;
-        
-        @media (min-width: 768px) {
-          background-image: url("../img/icon-email-768.png");
-        }
-      }
     }
     
     &--phone {
@@ -152,14 +145,6 @@
       @media (min-width: 1200px) {
         background-color: $phone-color-1200;
       }
-      
-      &::before {
-        background: url("../img/icon-phone.png") no-repeat left center;
-        
-        @media (min-width: 768px) {
-          background-image: url("../img/icon-phone-768.png");
-        }
-      }
     }
     
     &--skype {
@@ -171,14 +156,6 @@
       
       @media (min-width: 1200px) {
         background-color: $skype-color-1200;
-      }
-      
-      &::before {
-        background: url("../img/icon-skype.png") no-repeat left center;
-        
-        @media (min-width: 768px) {
-          background-image: url("../img/icon-skype-768.png");
-        }
       }
     }
   }

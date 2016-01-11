@@ -37,7 +37,6 @@
     @media (min-width: 768px) {
       display: inline-block;
       font-size: $fs-info-block-title-768;
-      
       text-align: left;
       padding-left: 28px;
       padding-right: 28px;
@@ -79,12 +78,12 @@
     @media (min-width: 768px) {
       text-align: left;
       padding-top: 0;
-      padding-left: 80px;
+      padding-left: 60px;
       margin-bottom: 35px;
     }
     
     @media (min-width: 1200px) {
-      padding-left: 75px;
+      padding-left: 55px;
     }
     
     &:last-child {
@@ -96,15 +95,15 @@
     &::before {
       content: "";
       position: absolute;
-      width: 60px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       top: 0;
       left: 0;
       right: 0;
       margin: auto;
       
       @media (min-width: 768px) {
-        top: -10px;
+        top: -5px;
         right: auto;
       }
     }
@@ -135,7 +134,5 @@
       }
     }
   }
-  
-  
 }
 

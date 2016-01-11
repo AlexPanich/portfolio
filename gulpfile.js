@@ -19,6 +19,12 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     rename = require('gulp-rename'),
     rigger = require('gulp-rigger'),
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    svgpath = require('path'),
+    cheerio = require('gulp-cheerio'),
+    inject = require('gulp-inject'),
+    iconify = require('gulp-iconify'),
     minifyCss = require('gulp-minify-css');
 
 var path = {
@@ -38,6 +44,9 @@ var path = {
     img: 'src/img/',
     fonts: 'src/fonts/**/*.*',
     template: 'src/html/template',
+    svg: { inline: 'src/img/svg/inline/',
+           data: 'src/img/svg/data/'
+         },
     bower_insert: ['src/html/template/link.html', 'src/html/template/script.html']
   },
   watch: {
@@ -45,7 +54,10 @@ var path = {
     js: ['src/js/**/*.js', '!src/js/script.js'],
     sass: 'src/sass/**/*.scss',
     fonts: 'src/fonts/**/*.*',
-    bower: 'bower.json'
+    bower: 'bower.json',
+    svg: { inline: 'src/img/svg/inline/',
+           data: 'src/img/svg/data/'
+         }
   },
   clean: './build',
   bower: 'src/bower_components'
@@ -78,7 +90,7 @@ gulp.task('build:css', ['build:clean'], function() {
 });
 
 
-gulp.task('build:copyHtml', ['build:clean', 'build:css', 'build:js'], function() {
+gulp.task('build:copyHtml', ['build:clean', 'build:css', 'build:js', 'svgstore'], function() {
   return gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(replace('style.css', 'style.min.css'))
@@ -87,7 +99,7 @@ gulp.task('build:copyHtml', ['build:clean', 'build:css', 'build:js'], function()
         .pipe(gulp.dest(path.build.html));
 });
 
-gulp.task('build:html', ['build:clean', 'build:css', 'build:js', 'build:copyHtml'], function() {
+gulp.task('build:html', ['build:clean', 'build:css', 'build:js', 'svgstore', 'build:copyHtml'], function() {
   return gulp.src(path.build.html + '*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
@@ -103,7 +115,7 @@ gulp.task('csscomb', function() {
 });
 
 gulp.task('build:image', ['build:clean'], function() {
-  return gulp.src('src/img/**/*')
+  return gulp.src('src/img/**/*', '!src/img/svg/**/*')
         .pipe(newer('build'))
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'));
@@ -160,10 +172,14 @@ gulp.task('css', function() {
         .pipe(reload({stream:true}));
 });
 
-gulp.task('html', function() {
+gulp.task('html',['svgstore'], function() {
   return gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(replace('"../../bower', '"bower'))
+        .pipe(replace(/{{{.*}}}/g, function(a) {
+            var name = a.replace('{{{','').replace('}}}','');
+            return '<svg class="' + name + '"><use xlink:href="#' + 'icon-' + name + '"></use></svg>';
+          }))
         .pipe(gulp.dest(path.src.root))
         .pipe(reload({stream:true}));
 });
@@ -176,7 +192,55 @@ gulp.task('js', function() {
         .pipe(reload({stream:true}));
 });
 
-gulp.task('watcher', ['css', 'js', 'html','browserSync'], function() {
+gulp.task('svgstore', function() {
+  var svgs =  gulp.src(path.src.svg.inline + '*.svg')
+        .pipe(rename({prefix: 'icon-'}))
+        .pipe(svgmin(function (file) {
+          var prefix = svgpath.basename(file.relative, svgpath.extname(file.relative));
+          return {
+            plugins: [{
+              cleanupIDs: {
+                prefix: prefix + '-',
+                minify: true
+              }
+            }]
+          }
+        }))
+        .pipe(svgstore({ inlineSvg: true }))
+        .pipe(cheerio(function ($) {
+          $('svg').attr('style', 'display:none');
+          }));
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+  
+  return gulp.src('src/html/template/inline-svg.html')
+        .pipe(inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest('src/html/template/'));
+});
+
+gulp.task('iconify', function() {
+  iconify({
+    src: path.src.svg.data + 'expirience/' + '*.svg',
+    pangOutput: path.src.img + 'png',
+    defaultWidth: '60px',
+    defaultHeight: '50px',
+    svgoOptions: {
+      enabled: true,
+      options: {
+                plugins: [
+                    { removeUnknownsAndDefaults: false },
+                    { mergePaths: false }
+                ]
+            }
+    }
+    
+    
+  });
+});
+
+gulp.task('watcher', ['css', 'js', 'html','browserSync', 'svgstore'], function() {
+  gulp.watch(path.watch.svg.inline, ['svgstore']);
   gulp.watch(path.watch.bower, ['bower']);
   gulp.watch(path.watch.sass, ['css']);
   gulp.watch(path.watch.html, ['html']);

@@ -91,6 +91,7 @@
     padding: 10px 0;
     background-color: $bg-color-main-nav-320;
     border-top: 1px solid $border-main-nav-320;
+    cursor: pointer;
     
     @media (min-width: 768px) {
       border: none;  
